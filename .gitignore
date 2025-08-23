@@ -21,6 +21,8 @@ logs/
 # Configuração sensível
 appsettings.*.json
 ocelot.*.json
+appsettings.json
+appsettings.Development.json
 
 # Sistema
 .DS_Store
