@@ -6,36 +6,11 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 5001
+          "Port": 5000
         }
       ],
-      "UpstreamPathTemplate": "/api/v1/user/{everything}"
-    },
-    {
-      "DownstreamPathTemplate": "/api/v1/restaurant/{everything}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 5002
-        }
-      ],
-      "UpstreamPathTemplate": "/api/v1/restaurant/{everything}",
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "Bearer",
-        "AllowedScopes": []
-      }
-    },
-    {
-      "DownstreamPathTemplate": "/api/v1/barber/{everything}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 5003
-        }
-      ],
-      "UpstreamPathTemplate": "/api/v1/barber/{everything}",
+      "UpstreamPathTemplate": "/api/user/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer",
         "AllowedScopes": []
@@ -43,6 +18,6 @@
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "https://localhost:7000"
+    "BaseUrl": "https://meuservidorubuntu.com.br"
   }
 }

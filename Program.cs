@@ -6,9 +6,9 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var secretKey = builder.Configuration["Jwt:SecretKey"];
-var issuer = builder.Configuration["Jwt:Issuer"];
-var audience = builder.Configuration["Jwt:Audience"];
+var secretKey = builder.Configuration["JwtSettings:SecretKey"];
+var issuer = builder.Configuration["JwtSettings:Issuer"];
+var audience = builder.Configuration["JwtSettings:Audience"];
 
 builder.Configuration.AddJsonFile("ocelot.json", optional: false, reloadOnChange: true);
 
