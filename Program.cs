@@ -5,7 +5,7 @@ using Ocelot.Middleware;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
-
+builder.WebHost.UseUrls("http://localhost:5001");
 var secretKey = builder.Configuration["JwtSettings:SecretKey"];
 var issuer = builder.Configuration["JwtSettings:Issuer"];
 var audience = builder.Configuration["JwtSettings:Audience"];
