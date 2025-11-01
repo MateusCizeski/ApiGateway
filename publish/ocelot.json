@@ -1,7 +1,8 @@
 ﻿{
   "Routes": [
     {
-      "DownstreamPathTemplate": "/api/v1/user/{everything}",
+      "DownstreamPathTemplate": "/api/v1/users",
+      "UpstreamPathTemplate": "/api/v1/users",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -9,7 +10,6 @@
           "Port": 5000
         }
       ],
-      "UpstreamPathTemplate": "/api/user/{everything}",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer",

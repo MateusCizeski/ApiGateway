@@ -1,8 +1,8 @@
 ﻿{
   "Routes": [
     {
-      "DownstreamPathTemplate": "/api/v1/users",
-      "UpstreamPathTemplate": "/api/v1/users",
+      "DownstreamPathTemplate": "/api/v1/users/{everything}",
+      "UpstreamPathTemplate": "/api/v1/users/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -18,6 +18,6 @@
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "https://meuservidorubuntu.com.br"
+    "BaseUrl": "http://localhost:5001"
   }
 }
