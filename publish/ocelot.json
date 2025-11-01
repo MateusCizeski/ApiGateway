@@ -2,23 +2,25 @@
   "Routes": [
     {
       "DownstreamPathTemplate": "/{everything}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 5000
+          "Port": 7117
         }
       ],
       "UpstreamPathTemplate": "/users/{everything}",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ],
-      "AddHeadersToRequest": {
-        "X-Forwarded-Host": "localhost"
-      },
       "DangerousAcceptAnyServerCertificateValidator": true,
       "HttpHandlerOptions": {
         "UseCookieContainer": true,
         "AllowAutoRedirect": true,
         "UseTracing": false
+      },
+      "AddHeadersToDownstream": {
+        "Authorization": "{Header.Authorization}",
+        "X-Forwarded-For": "{RemoteIpAddress}",
+        "X-Device-Id": "{Header.X-Device-Id}"
       }
     }
   ],
