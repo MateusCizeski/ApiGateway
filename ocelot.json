@@ -14,7 +14,12 @@
       "AddHeadersToRequest": {
         "X-Forwarded-Host": "localhost"
       },
-      "DangerousAcceptAnyServerCertificateValidator": true
+      "DangerousAcceptAnyServerCertificateValidator": true,
+      "HttpHandlerOptions": {
+        "UseCookieContainer": true,
+        "AllowAutoRedirect": true,
+        "UseTracing": false
+      }
     }
   ],
   "GlobalConfiguration": {
