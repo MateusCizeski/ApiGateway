@@ -2,7 +2,7 @@
   "Routes": [
     {
       "DownstreamPathTemplate": "/{everything}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
